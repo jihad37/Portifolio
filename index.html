@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f5f0;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #2d1c1c; 
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 1000;
+      gap: 2rem;
+    }
+
+    header h2 {
+      margin: 0;
+    }
+
+    header nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #c27b48;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h1{
+      color: #d1c7c7;
+    }
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+    #home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 100px;
+      gap: 5rem;
+      flex-wrap: wrap;
+    }
+
+    #home .text {
+      max-width: 500px;
+      text-align: center;
+    }
+
+    #home .profile-pic {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #home .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #home h2{
+    font-size: 50px;
+}
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .projects img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #c27b48; 
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+#about {
+  width: 70%;          
+  max-width: 800px;    
+  margin: 100px auto;   
+  text-align: center;    
+  padding: 20px;       
+}
+
+    .btn:hover {
+      background: #a96332;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #4b2e2e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #c27b48;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: none;
+      transition: background 0.3s ease;
+      z-index: 1000;
+    }
+
+    #scrollTopBtn:hover {
+      background: #a96332;
+    }
+
+    @media (max-width: 768px) {
+      #home {
+        flex-direction: column;
+      }
+      #home .text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h2>Portfolio</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" data-aos="fade-up">
+    <div class="text">
+      <h2>Jihad Wael Elsiafy</h2>
+      <p>A Web Developer specialized in Front-End.</p>
+    </div>
+    <div class="profile-pic">
+      <img src="img/photo_2025-09-04_19-25-33.jpg" alt="Profile Picture">
+    </div>
+  </section>
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Recently graduated Front-End Developer with 1-2 year of hands-on experience through internships and personal 
+projects. Strong background in web technologies. Passionate about creating user-friendly and responsive web 
+applications. Eager to grow in a creative environment.</p>
+  </section>
+
+  <section id="skills" data-aos="zoom-in">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><i class="fa-brands fa-html5 fa-2x" style="color:#e44d26"></i><p>HTML</p></div>
+      <div class="card"><i class="fa-brands fa-css3-alt fa-2x" style="color:#2965f1"></i><p>CSS</p></div>
+      <div class="card"><i class="fa-brands fa-js fa-2x" style="color:#f7df1e"></i><p>JavaScript</p></div>
+      <div class="card"><i class="fa-brands fa-bootstrap fa-2x" style="color:#563d7c"></i><p>Bootstrap</p></div>
+    </div>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card" data-aos="flip-left">
+        <img src="img/p1.png" alt="Project 1">
+        <h3>Sign Language</h3>
+        <p>A web application that translates sign language into text and speech. It aims to help bridge communication between the hearing-impaired community and others by providing an interactive, user-friendly interface.</p>
+        <a href="https://jihad37.github.io/sign-language/" class="btn">Live Demo</a>
+        <a href="https://github.com/jihad37/sign-language" class="btn">Source Code</a>
+      </div>
+      <div class="card" data-aos="flip-right">
+        <img src="img/p2.png" alt="Project 2">
+        <h3>Bezel</h3>
+        <p>A professional digital agency website showcasing services, portfolio projects, and client success stories with a clean, modern, and responsive design.</p>
+        <a href="https://jihad37.github.io/bezel/" class="btn">Live Demo</a>
+        <a href="https://github.com/jihad37/bezel" class="btn">Source Code</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>gehadwael37@gmail.com</p>
+    <p><a href='https://www.linkedin.com/in/gehad-elsiafy-717621252/' target="_blank">LinkedIn</a> | <a href='https://github.com/jihad37' target="_blank">GitHub</a></p>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>© 2025 Jihad. All Rights Reserved.</p>
+  </footer>
+
+  
+  <button id="scrollTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>
